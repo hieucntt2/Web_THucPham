@@ -46,6 +46,7 @@ namespace WebQLCuaHangThucPham.Areas.Admins.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "MaTT,MoTa,Anh,ND")] TinTuc tinTuc , HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
@@ -83,6 +84,7 @@ namespace WebQLCuaHangThucPham.Areas.Admins.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "MaTT,MoTa,Anh,ND")] TinTuc tinTuc)
         {
             if (ModelState.IsValid)

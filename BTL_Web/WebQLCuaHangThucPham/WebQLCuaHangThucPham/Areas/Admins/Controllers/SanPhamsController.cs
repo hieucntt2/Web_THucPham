@@ -54,6 +54,7 @@ namespace WebQLCuaHangThucPham.Areas.Admins.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "MaSP,TenSP,GTSP,MaLoai,SL,Time_Create,Time_Update,NguoiTao,isActive,isDelete")] SanPham sanPham)
         {
             if (ModelState.IsValid)
@@ -91,6 +92,7 @@ namespace WebQLCuaHangThucPham.Areas.Admins.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit([Bind(Include = "MaSP,TenSP,GTSP,MaLoai,SL,Time_Create,Time_Update,NguoiTao,isActive,isDelete")] SanPham sanPham)
         {
             if (ModelState.IsValid)

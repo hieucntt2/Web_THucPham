@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmin.cshtml";
 }
-
+<script src="~/Content/ckeditor/ckeditor.js"></script>
 <div class="content">
     <div class="card">
         <!-- /.card-header -->
@@ -67,7 +67,7 @@
                         <div class="form-group d-flex">
                             @Html.LabelFor(model => model.GTSP, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                <textarea name="GTSP" id="GTSP" class="form-control">@Model.GTSP</textarea>
+                                <textarea name="GTSP" id="ckeditor" class="ckeditor">@Model.GTSP</textarea>
                                 @Html.ValidationMessageFor(model => model.GTSP, "", new { @class = "text-danger" })
                             </div>
                         </div>
