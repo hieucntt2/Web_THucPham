@@ -323,8 +323,9 @@ $(document).ready(function () {
     })
     //đăng ký
     $('.btnregiss').click(function () {
+        var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         let input = $(".modal__login + form").serializeObject();
-        if (input.HoTen == "" || input.Email == "") {
+        if (input.HoTen == "" || input.Email == "" || input.DiaChi == "" || input.TaiKhoan == "" || input.MatKhau == "" || input.SDT == "") {
             alert("Thông tin nhập chưa đủ");
         }
         else {
